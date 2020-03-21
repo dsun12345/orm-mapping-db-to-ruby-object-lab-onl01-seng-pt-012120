@@ -90,7 +90,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10
-      limit ?
+      LIMIT ?
     SQL
     
     DB[:conn].execute(sql, x).collect do |row|
