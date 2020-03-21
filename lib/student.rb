@@ -106,7 +106,7 @@ class Student
       limit 1
     SQL
     
-    DB[:conn].execute(sql)[0]
+    DB[:conn].execute(sql)
   end 
   
 end
