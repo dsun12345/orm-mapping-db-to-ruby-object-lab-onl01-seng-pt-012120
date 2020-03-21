@@ -106,7 +106,9 @@ class Student
       limit 1
     SQL
     
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql).collect do |row|
+     new_from_db(row)
+   end.first 
   end 
   
 end
